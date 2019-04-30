@@ -1,14 +1,12 @@
 # Quick Start：Make your first game
 
-This document is a systematic introductions of the editor panel and the functions and workflows of Cocos Creator. Completing this chapter will help you quickly learn the general flow and methods for developing games with Cocos Creator. After finishing this tutorial you have enough information to get started creating basic games. It is strongly recommended you continue reading this guide to understand the details of each functional block and the complete workflows. Now, let's begin!
+This document is a succinct introduction of the editor panel and the functions and workflows of __Cocos Creator__. Completing this chapter will help you quickly learn the general flow and methods for developing games with __Cocos Creator__. After finishing this tutorial you have enough information to get started creating basic games. It is strongly recommended you continue to read this guide to understand the details of each functional block and the complete workflow. Now, let's begin!
 
-Following the tutorial, we will create a deceiving game that is named **Pick Up the Stars**. Players of this game need to manipulate an **obtuse** monster that never stops jumping to touch the continuously appearing stars. The dazzling acceleration will bring great challenges to players. Play with your friends and see who can obtain the most stars!
+Following the tutorial, we will create a game that is named **Pick Up the Stars**. Players of this game need to manipulate an **obesee monster** that never stops jumping,in-order to touch the continuously appearing stars. The increased acceleration will bring great challenges to players. Play with your friends and see who can obtain the most stars!
 
-The completed form of this game can be played here:
+The completed form of this game can be played [here](http://fbdemos.leanapp.cn/star-catcher/)
 
-<http://fbdemos.leanapp.cn/star-catcher/>
-
-## Prepare project and resources
+## Prepare the project and resources
 
 We have prepared for you all the resources needed for creating this game. Download **Original Project** and decompress it to the location you want. Then we can start:
 
@@ -20,11 +18,11 @@ You can also download the completed project. If there is any confusion when foll
 
 ## Open the original project
 
-If you still don't know how to obtain and start Cocos Creator, please read the [Install](install.md) section.
+If you still don't know how to obtain and start __Cocos Creator__, please read the [Install](install.md) section.
 
-1. First, start Cocos Creator, and choose **Open other projects**
+1. First, start __Cocos Creator__, and choose **Open other projects**
 2. In the pop up input field for selecting folder, choose `start_project` that has just been downloaded and decompressed, and click the **Open** button
-3. The main window of Cocos Creator editor will be opened, and you will see the project status as follows
+3. The main window of __Cocos Creator__ editor will be opened, and you will see the project status as follows
 
 ![start project](quick-start/init_start_project.png)
 
@@ -34,7 +32,7 @@ Our original project has included all the game resources needed, therefore you d
 
 Next, let's get to know the resources of the project. Please pay attention to the **Assets** panel, on which all the resource allocation graphs of the project are shown.
 
-We can see that the root directory of the project resources is named as **assets**, which is in accordance with the `assets` directory in the decompressed original project. Only resources under this directory can be imported by Cocos Creator into the project and be managed.
+We can see that the root directory of the project resources is named as **assets**, which is in accordance with the `assets` directory in the decompressed original project. Only resources under this directory can be imported by __Cocos Creator__ into the project and be managed.
 
 The **Assets** panel can display the directory structure of any hierarchy. An icon like ![folder](quick-start/folder.png) represents a folder. Clicking the triangle icon on the left side of the folder, you can unfold the contents of the folder. After completely unfolding the folder, the **Assets** panel will present itself as illustrated below.
 
@@ -48,7 +46,7 @@ Every resource is a document, which, after being imported into the project, will
 
 ## Creating a game scene
 
-In Cocos Creator, the game scene is the core of organizing the game contents when developing games, which is also the carrier for all the game contents presented to players. The game scene will normally include the following contents:
+In __Cocos Creator__, the game scene is the core of organizing the game contents when developing games, which is also the carrier for all the game contents presented to players. The game scene will normally include the following contents:
 
 - Scene images and words (Sprite, Label)
 - Characters
@@ -140,7 +138,7 @@ In this way our scene's basic artistic content is set up. In the next section we
 
 ## Writing the main character's script
 
-One of the core ideas of developing games by Cocos Creator is to let the content creation and function development undergo parallel cooperation smoothly. In the last section we focused on artistic content. Next we will write script to develop the flow of functions, and we will see that the finished program script can be used by content creators easily.
+One of the core ideas of developing games by __Cocos Creator__ is to let the content creation and function development undergo parallel cooperation smoothly. In the last section we focused on artistic content. Next we will write script to develop the flow of functions, and we will see that the finished program script can be used by content creators easily.
 
 Even if you have never written a program before, there's no need to worry. We will provide all the necessary codes in the tutorial. You only need to copy and paste them to the correct position. Then in this part you can ask your programmer partners for help. Next let's start creating script that drives the main character to act.
 
@@ -191,7 +189,7 @@ cc.Class({
 });
 ```
 
-Let's take a look at the role of these codes. First we can see a global `cc.Class()` method, what is `cc`? `cc` is the abbreviation for Cocos, the main namespace of the Cocos engine. And all the classes, functions, properties, and constants in the engine code are defined in this namespace. And `Class()` is a method under the `cc` module, which is used to declare classes in the Cocos Creator. To make it easier to differentiate, we call the class declared with `cc.Class` called `CCClass`. The parameter of the `Class()` method is a prototype object, the required class can be created by setting the desired type parameter in the form of a key-value pair in the prototype object.
+Let's take a look at the role of these codes. First we can see a global `cc.Class()` method, what is `cc`? `cc` is the abbreviation for Cocos, the main namespace of the Cocos engine. And all the classes, functions, properties, and constants in the engine code are defined in this namespace. And `Class()` is a method under the `cc` module, which is used to declare classes in the __Cocos Creator__. To make it easier to differentiate, we call the class declared with `cc.Class` called `CCClass`. The parameter of the `Class()` method is a prototype object, the required class can be created by setting the desired type parameter in the form of a key-value pair in the prototype object.
 
 **Example**:
 
@@ -205,7 +203,7 @@ The above code creates a type with the `cc.Class()` method and assigns it to the
 
 For `cc.Class` detailed learning can refer to [Declare class with cc.Class](../scripting/class.md).
 
-Now we go back to the code editor and look back at the code, which is the structure needed to write a component script. Scripts of such a structure are the components in Cocos creator, which can be mounted on the nodes in the scene and provide various functions that manipulate nodes. First, we will set up some properties and see how to adjust them in the scene.
+Now we go back to the code editor and look back at the code, which is the structure needed to write a component script. Scripts of such a structure are the components in __Cocos Creator__, which can be mounted on the nodes in the scene and provide various functions that manipulate nodes. First, we will set up some properties and see how to adjust them in the scene.
 
 Find the `properties` section in the `Player` script, change it to the following and save:
 
@@ -225,7 +223,7 @@ Find the `properties` section in the `Player` script, change it to the following
     //...
 ```
 
-Cocos Creator stipulates that a node has attributes that need to be written in the `properties` code block, which will specify how the protagonist moves, and we don't need to care about what the values are in the code, because we'll set these values directly in the **Properties**. Later in the game production process, we can put the properties that need to be adjusted at any time in `properties`.
+__Cocos Creator__ stipulates that a node has attributes that need to be written in the `properties` code block, which will specify how the protagonist moves, and we don't need to care about what the values are in the code, because we'll set these values directly in the **Properties**. Later in the game production process, we can put the properties that need to be adjusted at any time in `properties`.
 
 Now we can add the `Player` component to the node of the main character. Choose the `Player` node in the **Node Tree**, click the **Add Component** button in the **Properties** panel and choose `Add Custom Component -> Player` to add the `Player` component to the node of the main character.
 
@@ -259,9 +257,9 @@ Next we will add a method to make the main character jump. Add a method called `
     },
 ```
 
-Here you need to know about the Cocos Creator **Action system**. Because the action system is more complex, here is a simple introduction.
+Here you need to know about the __Cocos Creator__ **Action system**. Because the action system is more complex, here is a simple introduction.
 
-In simple terms, the **action** is the displacement, scaling, and rotation of a node in Cocos Creator.
+In simple terms, the **action** is the displacement, scaling, and rotation of a node in __Cocos Creator__.
 
 For example, in the above code, the `moveBy()` method is used to move a specified distance within a given time, the first parameter is the jump time we defined in the main character properties, and the second parameter is an Vec2 (representing 2D vector and coordinate) type objects. For a better understanding, we can look at the function description of the official:
 
@@ -310,7 +308,7 @@ Next invoke the newly added `setJumpAction` method in the `onLoad` method and im
 
 The `onLoad` method will be immediately implemented after loading the scene. So we will put operations and logic concerning initialization into it. We first pass the action of the loop jump to the `jumpAction` variable, then call the `runAction` method under the node mounted by this component, and pass the action of the loop jump to let the node (main character) jump all the time. Save the script, and then we can start running the game for the first time!
 
-Click the **preview** button ![preview](quick-start/preview_game.png) at the top of Cocos Creator editor, which looks like a "play" button. Cocos Creator will automatically open your default browser and run the game in it. Now we should see the main character --- a purple monster jumping lively and continuously in the scene.
+Click the **preview** button ![preview](quick-start/preview_game.png) at the top of __Cocos Creator__ editor, which looks like a "play" button. __Cocos Creator__ will automatically open your default browser and run the game in it. Now we should see the main character --- a purple monster jumping lively and continuously in the scene.
 
 ### Manipulation of movement
 
@@ -897,7 +895,7 @@ Now we can fully enjoy the newly created game. How many scores can you get? Don'
 
 ## Summary
 
-Congratulations! You have finished the first game created by Cocos Creator. We hope this quick start tutorial for beginners can help you understand the basic concepts and workflows in the game development process of Cocos Creator. If you are not interested in writing and learning script programming, you can directly copy and paste the completed script from the completed project.
+Congratulations! You have finished the first game created by __Cocos Creator__. We hope this quick start tutorial for beginners can help you understand the basic concepts and workflows in the game development process of __Cocos Creator__. If you are not interested in writing and learning script programming, you can directly copy and paste the completed script from the completed project.
 
 Next, you can continue to perfect this game. The following are some recommended improving methods:
 
@@ -913,4 +911,4 @@ For editions that have been improved in all the above aspects, you can download 
 
 Moreover, if you want to release the completed game on a server to share with your friends, you can read the content of the [Preview Build](basics/preview-build.md) section.
 
-Today's tutorial ends here. You can immediately start creating your second Cocos Creator game or continue reading this guide. For any questions on this quick start tutorial, you can send feedback on [Warehouse of this tutorial on Github](https://github.com/cocos-creator/tutorial-first-game).
+Today's tutorial ends here. You can immediately start creating your second __Cocos Creator__ game or continue reading this guide. For any questions on this quick start tutorial, you can send feedback on [Warehouse of this tutorial on Github](https://github.com/cocos-creator/tutorial-first-game).
